@@ -1,21 +1,26 @@
 package com.foreflight.core.weather.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 public class Conditions {
-    private String tempC;
+    private Double tempC;
     private String relativeHumidity;
     private List<CloudLayer> cloudLayers;
     private Visibility visibility;
     private Wind wind;
 
-
-    public String getTempC() {
+    public Double getTempC() {
         return tempC;
     }
 
-    public void setTempC(String tempC) {
+    public void setTempC(Double tempC) {
         this.tempC = tempC;
+    }
+
+    public Double getTempF() {
+        return tempC != null ? ((tempC * (1.8)) + 32) : null;
     }
 
     public String getRelativeHumidity() {

@@ -1,6 +1,5 @@
 package com.foreflight.core.weather;
 
-import com.foreflight.core.airport.HttpComponentsClientHttpRequestFactoryBasicAuth;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.http.HttpHeaders;

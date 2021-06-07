@@ -5,7 +5,6 @@ public class Wind {
     private Integer gustSpeedKts;
     private String direction;
     private String from;
-    private Boolean variable;
 
     public Integer getSpeedKts() {
         return speedKts;
@@ -37,13 +36,5 @@ public class Wind {
 
     public void setFrom(String from) {
         this.from = from;
-    }
-
-    public Boolean getVariable() {
-        return variable;
-    }
-
-    public void setVariable(Boolean variable) {
-        this.variable = variable;
     }
 }

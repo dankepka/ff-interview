@@ -1,8 +1,8 @@
 package com.foreflight.core.weather.dto;
+
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 
 public class Period {
 

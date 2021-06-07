@@ -1,12 +1,11 @@
 package com.foreflight.core.weather.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.List;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class ConditionsForecast {
 
     private String relativeHumidity;
+    @JsonSerialize(using = PeriodSerializer.class)
     private Period period;
     private Wind wind;
 

@@ -1,23 +1,19 @@
 package com.foreflight.core.weather.impl;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.foreflight.core.airport.AirportAPIException;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.foreflight.core.weather.WeatherAPIException;
 import com.foreflight.core.weather.WeatherService;
+import com.foreflight.core.weather.dto.Period;
+import com.foreflight.core.weather.dto.PeriodSerializer;
 import com.foreflight.core.weather.dto.WeatherDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
-import java.text.DateFormat;
 import java.util.Map;
 
 public class WeatherServiceImpl implements WeatherService {
