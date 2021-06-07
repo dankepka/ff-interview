@@ -2,13 +2,15 @@ package com.foreflight.core.weather.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonRootName(value = "report")
 public class WeatherDetails {
 
-    @JsonProperty(value = "conditions")
+    @JsonProperty("conditions")
     private Conditions conditions;
     @JsonProperty(value = "forecast")
+    @JsonSerialize(using = ForecastConditionSerializer.class)
     private ForeCast foreCast;
 
     public Conditions getConditions() {

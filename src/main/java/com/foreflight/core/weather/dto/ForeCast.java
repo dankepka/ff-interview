@@ -7,14 +7,10 @@ import java.util.List;
 
 public class ForeCast {
 
-    @JsonProperty("conditions")
-    @JsonSerialize(using = ForecastConditionSerializer.class)
     private List<ConditionsForecast> conditions;
-
     public List<ConditionsForecast> getConditions() {
         return conditions;
     }
-
     public void setConditions(List<ConditionsForecast> conditions) {
         this.conditions = conditions;
     }

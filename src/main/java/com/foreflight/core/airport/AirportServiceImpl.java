@@ -1,7 +1,5 @@
-package com.foreflight.core.airport.impl;
+package com.foreflight.core.airport;
 
-import com.foreflight.core.airport.AirportAPIException;
-import com.foreflight.core.airport.AirportService;
 import com.foreflight.core.airport.dto.AirportDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

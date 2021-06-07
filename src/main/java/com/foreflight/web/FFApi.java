@@ -28,7 +28,7 @@ public class FFApi {
 
     @GetMapping(produces={MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
-    Instructions hello(){
+    Instructions instructions(){
         return new Instructions();
     }
 

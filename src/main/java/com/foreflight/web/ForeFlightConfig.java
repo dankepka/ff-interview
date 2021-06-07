@@ -1,7 +1,7 @@
 package com.foreflight.web;
 import com.foreflight.core.airport.AirportRestTemplateFactory;
 import com.foreflight.core.airport.AirportService;
-import com.foreflight.core.airport.impl.AirportServiceImpl;
+import com.foreflight.core.airport.AirportServiceImpl;
 import com.foreflight.core.weather.WeatherRestTemplateFactory;
 import com.foreflight.core.weather.WeatherService;
 import com.foreflight.core.weather.impl.WeatherServiceImpl;

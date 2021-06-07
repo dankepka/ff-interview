@@ -37,4 +37,8 @@ public class Wind {
     public void setFrom(String from) {
         this.from = from;
     }
+
+    public String getSpeedMPH(){
+        return null!=speedKts ? String.format("%s",Double.valueOf(speedKts * 1.15078).intValue()) : "-";
+    }
 }

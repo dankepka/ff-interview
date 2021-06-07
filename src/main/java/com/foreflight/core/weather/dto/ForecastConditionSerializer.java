@@ -5,22 +5,20 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 
 import java.io.IOException;
-import java.time.LocalTime;
-import java.time.ZoneOffset;
 import java.util.Arrays;
 import java.util.List;
 
-public class ForecastConditionSerializer extends StdSerializer<List> {
+public class ForecastConditionSerializer extends StdSerializer<ForeCast> {
 
     public ForecastConditionSerializer(){
-        super(List.class);
+        super(ForeCast.class);
     }
 
     @Override
-    public void serialize(List conditionsForecasts, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
+    public void serialize(ForeCast conditionsForecasts, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         jsonGenerator.writeStartObject();
-        if(conditionsForecasts.size()>2){
-            List forecasts = Arrays.asList(conditionsForecasts.get(1),conditionsForecasts.get(2));
+        if(conditionsForecasts.getConditions().size()>2){
+            List forecasts = Arrays.asList(conditionsForecasts.getConditions().get(1),conditionsForecasts.getConditions().get(2));
             jsonGenerator.writeObjectField("conditions",forecasts);
         }
         jsonGenerator.writeEndObject();

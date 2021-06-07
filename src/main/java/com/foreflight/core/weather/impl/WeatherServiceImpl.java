@@ -2,11 +2,8 @@ package com.foreflight.core.weather.impl;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.foreflight.core.weather.WeatherAPIException;
 import com.foreflight.core.weather.WeatherService;
-import com.foreflight.core.weather.dto.Period;
-import com.foreflight.core.weather.dto.PeriodSerializer;
 import com.foreflight.core.weather.dto.WeatherDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
